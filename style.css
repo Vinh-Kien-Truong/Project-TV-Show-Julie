@@ -1,3 +1,141 @@
-#root {
-  color: red;
+:root {
+  --color-parme: oklch(30% 0.05 0);
+  --color-body: oklch(12.095% 0.04151 357.042);
+  --color-bg-body: oklch(62.924% 0.00774 354.414);
+  --color-blue: oklch(50% 0.15 250);
+  --color-blue-dark: oklch(0.43 0.06 248.38);
+  --color-gold: oklch(70% 0.18 80);
+  --color-red: oklch(55% 0.22 30);
+  --color-orange: oklch(65% 0.15 50);
+  --color-green: oklch(45% 0.12 180);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+body {
+  color: var(--color-body);
+  background-color: var(--color-bg-body);
+  font-family: Helvetica, Arial, sans-serif;
+
+}
+
+body,
+figure,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 1.25rem;
+  max-width: 60ch;
+}
+
+a:link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--color-parme);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header {
+  margin: 2rem 0;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+h1.page-title {
+  text-align: right;
+}
+
+.page-title a:link {
+  color: var(--color-body);
+}
+
+.page-title span {
+  display: block;
+
+  &:first-of-type {
+    background: linear-gradient(to top, var(--color-body) 20%, var(--color-blue-dark));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    color: var(--color-body);
+  }
+
+  &:last-of-type {
+    font-size: 1rem;
+  }
+}
+
+.episodes-wrapper {
+  padding: 2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 2.5rem;
+}
+
+.episode {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: var(--color-body) 0px 5px 14px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.episode-banner {
+  text-align: right;
+  padding: 0.5rem;
+  background-color: var(--color-gold);
+}
+
+.episode-figure {
+  background-color: white;
+  border-bottom: 0.5rem solid var(--color-gold);
+}
+
+.episode-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.episode-link {
+  margin-top: 1rem;
+  height: 100%;
+  align-self: self-end;
+  align-content: flex-end;
+}
+
+.icon-size {
+
+  margin-left: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translateY(3px);
 }

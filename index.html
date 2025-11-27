@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Game of Thrones, the full series listing.">
     <title>TV Show Project | Serotonine</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -10,11 +12,26 @@
 
   <body>
     <div id="root">
+      <header class="header">
+        <div class="header-wrapper">
+          <h1 class="page-title">
+            <span>Game of Thrones: the full series</span>
+            <span><small>Source: <a href="https://tvmaze.com/">TVMaze.com</a></small></span>
+          </h1>
+          </div.header-wrapper>
+
+      </header>
+      <main class="main">
+        <article class="episodes-wrapper">
+
+        </article>
+      </main>
     </div>
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-    <script src="episodes.js"></script>
+    <script src="./js/episodes.js"></script>
 
     <!-- Loads YOUR javascript code -->
-    <script src="script.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
+
 </html>
